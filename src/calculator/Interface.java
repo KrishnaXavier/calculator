@@ -71,6 +71,7 @@ public class Interface extends javax.swing.JFrame {
         });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculator");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 650));
@@ -296,9 +297,8 @@ public class Interface extends javax.swing.JFrame {
 
     private String calculate(String calculation) throws ScriptException {
         ScriptEngineManager manager = new ScriptEngineManager();
-        ScriptEngine engine = manager.getEngineByName("JavaScript");
-        Object result = engine.eval(calculation);                        
-        return result.toString();
+        ScriptEngine engine = manager.getEngineByName("JavaScript");                
+        return (engine.eval(calculation)).toString();
     }      
     
     private void setBackgrouondColorRand(){
