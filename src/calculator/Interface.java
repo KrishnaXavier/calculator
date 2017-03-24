@@ -14,8 +14,7 @@ import javax.swing.JButton;
  * @author Krishna Xavier
  */
 public class Interface extends javax.swing.JFrame {
-    private static String num = "";
-    private static String firstTerm = "";
+    private static String num = "";    
     public static Style Style;
 
     public Interface() {
@@ -49,7 +48,6 @@ public class Interface extends javax.swing.JFrame {
         addition = new javax.swing.JButton();
         multiplication = new javax.swing.JButton();
         division = new javax.swing.JButton();
-        firstPartCal = new javax.swing.JLabel();
         clear = new javax.swing.JButton();
         color = new javax.swing.JButton();
 
@@ -76,17 +74,14 @@ public class Interface extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 650));
         setMinimumSize(new java.awt.Dimension(700, 650));
-        getContentPane().setLayout(null);
 
-        txtFieldResult.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
+        txtFieldResult.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         txtFieldResult.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtFieldResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtFieldResultActionPerformed(evt);
             }
         });
-        getContentPane().add(txtFieldResult);
-        txtFieldResult.setBounds(43, 66, 608, 50);
 
         number1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number1.setText("1");
@@ -96,8 +91,6 @@ public class Interface extends javax.swing.JFrame {
                 number1ActionPerformed(evt);
             }
         });
-        getContentPane().add(number1);
-        number1.setBounds(43, 149, 85, 85);
 
         number2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number2.setText("2");
@@ -107,8 +100,6 @@ public class Interface extends javax.swing.JFrame {
                 number2ActionPerformed(evt);
             }
         });
-        getContentPane().add(number2);
-        number2.setBounds(148, 149, 85, 85);
 
         number3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number3.setText("3");
@@ -118,8 +109,6 @@ public class Interface extends javax.swing.JFrame {
                 number3ActionPerformed(evt);
             }
         });
-        getContentPane().add(number3);
-        number3.setBounds(250, 150, 85, 85);
 
         number4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number4.setText("4");
@@ -129,8 +118,6 @@ public class Interface extends javax.swing.JFrame {
                 number4ActionPerformed(evt);
             }
         });
-        getContentPane().add(number4);
-        number4.setBounds(43, 254, 85, 85);
 
         number5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number5.setText("5");
@@ -140,8 +127,6 @@ public class Interface extends javax.swing.JFrame {
                 number5ActionPerformed(evt);
             }
         });
-        getContentPane().add(number5);
-        number5.setBounds(148, 254, 85, 85);
 
         number6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number6.setText("6");
@@ -151,8 +136,6 @@ public class Interface extends javax.swing.JFrame {
                 number6ActionPerformed(evt);
             }
         });
-        getContentPane().add(number6);
-        number6.setBounds(250, 250, 85, 85);
 
         number7.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number7.setText("7");
@@ -162,8 +145,6 @@ public class Interface extends javax.swing.JFrame {
                 number7ActionPerformed(evt);
             }
         });
-        getContentPane().add(number7);
-        number7.setBounds(43, 357, 85, 85);
 
         number8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number8.setText("8");
@@ -173,8 +154,6 @@ public class Interface extends javax.swing.JFrame {
                 number8ActionPerformed(evt);
             }
         });
-        getContentPane().add(number8);
-        number8.setBounds(148, 357, 85, 85);
 
         number9.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number9.setText("9");
@@ -184,8 +163,6 @@ public class Interface extends javax.swing.JFrame {
                 number9ActionPerformed(evt);
             }
         });
-        getContentPane().add(number9);
-        number9.setBounds(250, 360, 85, 85);
 
         number0.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number0.setText("0");
@@ -195,8 +172,6 @@ public class Interface extends javax.swing.JFrame {
                 number0ActionPerformed(evt);
             }
         });
-        getContentPane().add(number0);
-        number0.setBounds(43, 460, 190, 85);
 
         point.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         point.setText(".");
@@ -206,8 +181,6 @@ public class Interface extends javax.swing.JFrame {
                 pointActionPerformed(evt);
             }
         });
-        getContentPane().add(point);
-        point.setBounds(250, 460, 85, 85);
 
         equal.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         equal.setText("=");
@@ -217,8 +190,6 @@ public class Interface extends javax.swing.JFrame {
                 equalActionPerformed(evt);
             }
         });
-        getContentPane().add(equal);
-        equal.setBounds(460, 360, 191, 85);
 
         subtraction.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         subtraction.setText("-");
@@ -228,8 +199,6 @@ public class Interface extends javax.swing.JFrame {
                 subtractionActionPerformed(evt);
             }
         });
-        getContentPane().add(subtraction);
-        subtraction.setBounds(560, 150, 85, 85);
 
         addition.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         addition.setText("+");
@@ -239,8 +208,6 @@ public class Interface extends javax.swing.JFrame {
                 additionActionPerformed(evt);
             }
         });
-        getContentPane().add(addition);
-        addition.setBounds(460, 150, 85, 85);
 
         multiplication.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         multiplication.setText("*");
@@ -250,8 +217,6 @@ public class Interface extends javax.swing.JFrame {
                 multiplicationActionPerformed(evt);
             }
         });
-        getContentPane().add(multiplication);
-        multiplication.setBounds(460, 250, 85, 85);
 
         division.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         division.setText("/");
@@ -261,13 +226,6 @@ public class Interface extends javax.swing.JFrame {
                 divisionActionPerformed(evt);
             }
         });
-        getContentPane().add(division);
-        division.setBounds(560, 250, 85, 85);
-
-        firstPartCal.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
-        firstPartCal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        getContentPane().add(firstPartCal);
-        firstPartCal.setBounds(50, 10, 600, 40);
 
         clear.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         clear.setText("C");
@@ -277,8 +235,6 @@ public class Interface extends javax.swing.JFrame {
                 clearActionPerformed(evt);
             }
         });
-        getContentPane().add(clear);
-        clear.setBounds(460, 460, 85, 85);
 
         color.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         color.setText("?");
@@ -288,8 +244,95 @@ public class Interface extends javax.swing.JFrame {
                 colorActionPerformed(evt);
             }
         });
-        getContentPane().add(color);
-        color.setBounds(560, 460, 85, 85);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtFieldResult, javax.swing.GroupLayout.PREFERRED_SIZE, 608, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(number1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(number2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)
+                        .addComponent(number3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125)
+                        .addComponent(addition, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(subtraction, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(number4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(number5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(number6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(124, 124, 124)
+                        .addComponent(multiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(division, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(number7, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(number8, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(number9, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(124, 124, 124)
+                        .addComponent(equal, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(number0, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(17, 17, 17)
+                        .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(125, 125, 125)
+                        .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15)
+                        .addComponent(color, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(txtFieldResult, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(number1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(number2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(number3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addition, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(subtraction, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(multiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(division, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(number4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(number5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(number6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(number8, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(number9, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(number7, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(equal, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(number0, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(color, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -315,95 +358,75 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_txtFieldResultActionPerformed
 
     private void number2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number2ActionPerformed
-        num += "2";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "2");
     }//GEN-LAST:event_number2ActionPerformed
 
     private void number5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number5ActionPerformed
-        num += "5";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "5");
     }//GEN-LAST:event_number5ActionPerformed
 
     private void number6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number6ActionPerformed
-        num += "6";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "6");
     }//GEN-LAST:event_number6ActionPerformed
 
     private void multiplicationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicationActionPerformed
-        num += "*";
-        firstPartCal.setText(firstTerm = num);
-        txtFieldResult.setText(num = "");
+        txtFieldResult.setText(num += "*");
     }//GEN-LAST:event_multiplicationActionPerformed
 
     private void number1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number1ActionPerformed
-        num += "1";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "1");
     }//GEN-LAST:event_number1ActionPerformed
 
     private void number3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number3ActionPerformed
-        num += "3";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "3");
     }//GEN-LAST:event_number3ActionPerformed
 
     private void number4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number4ActionPerformed
-        num += "4";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "4");
     }//GEN-LAST:event_number4ActionPerformed
 
     private void number7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number7ActionPerformed
-        num += "7";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "7");
     }//GEN-LAST:event_number7ActionPerformed
 
     private void number8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number8ActionPerformed
-        num += "8";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "8");
     }//GEN-LAST:event_number8ActionPerformed
 
     private void number9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number9ActionPerformed
-        num += "9";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "9");
     }//GEN-LAST:event_number9ActionPerformed
 
     private void number0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_number0ActionPerformed
-        num += "0";
-        txtFieldResult.setText(num);
+        txtFieldResult.setText(num += "0");
     }//GEN-LAST:event_number0ActionPerformed
 
     private void equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalActionPerformed
         try {
-            firstPartCal.setText(calculate(firstTerm+num));            
-            txtFieldResult.setText(num = "");
+            txtFieldResult.setText(num = calculate(num));                        
         } catch (ScriptException ex) {
             Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_equalActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
-        num += ".";
+        txtFieldResult.setText(num += ".");
     }//GEN-LAST:event_pointActionPerformed
 
     private void additionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionActionPerformed
-        num += "+";
-        firstPartCal.setText(firstTerm = num);
-        txtFieldResult.setText(num = "");
+        txtFieldResult.setText(num += "+");
     }//GEN-LAST:event_additionActionPerformed
 
     private void subtractionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionActionPerformed
-        num += "-";
-        firstPartCal.setText(firstTerm = num);
-        txtFieldResult.setText(num = "");
+        txtFieldResult.setText(num += "-");
     }//GEN-LAST:event_subtractionActionPerformed
 
     private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
-        num += "/";
-        firstPartCal.setText(firstTerm = num);
-        txtFieldResult.setText(num = "");
+        txtFieldResult.setText(num += "/");
     }//GEN-LAST:event_divisionActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-        txtFieldResult.setText(firstTerm = num = "");
-        firstPartCal.setText("");
+        txtFieldResult.setText(num = "");        
     }//GEN-LAST:event_clearActionPerformed
 
     private void point2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_point2ActionPerformed
@@ -451,7 +474,6 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton color;
     private javax.swing.JButton division;
     private javax.swing.JButton equal;
-    private javax.swing.JLabel firstPartCal;
     private javax.swing.JButton multiplication;
     private javax.swing.JButton number0;
     private javax.swing.JButton number1;
