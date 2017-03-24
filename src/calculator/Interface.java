@@ -1,22 +1,27 @@
 package calculator;
 
+import java.awt.Color;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
+import javax.swing.JButton;
 
 /**
  *
  * @author Krishna Xavier
  */
 public class Interface extends javax.swing.JFrame {
-
     private static String num = "";
     private static String firstTerm = "";
+    public static Style Style;
 
     public Interface() {
-        initComponents();
+        initComponents();        
+        Style.removeBtn(new JButton[]{number1, number2, number3, number4, number5, number6, number7, number8, number9, number0, 
+            point, addition, subtraction, multiplication, division, equal, clear, color});
     }
 
     @SuppressWarnings("unchecked")
@@ -26,6 +31,7 @@ public class Interface extends javax.swing.JFrame {
         btnNumber4 = new javax.swing.JButton();
         btnNumber5 = new javax.swing.JButton();
         btnNumber6 = new javax.swing.JButton();
+        point2 = new javax.swing.JButton();
         txtFieldResult = new javax.swing.JTextField();
         number1 = new javax.swing.JButton();
         number2 = new javax.swing.JButton();
@@ -44,6 +50,8 @@ public class Interface extends javax.swing.JFrame {
         multiplication = new javax.swing.JButton();
         division = new javax.swing.JButton();
         firstPartCal = new javax.swing.JLabel();
+        clear = new javax.swing.JButton();
+        color = new javax.swing.JButton();
 
         btnNumber4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         btnNumber4.setText("1");
@@ -54,12 +62,22 @@ public class Interface extends javax.swing.JFrame {
         btnNumber6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         btnNumber6.setText("1");
 
+        point2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        point2.setText(".");
+        point2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                point2ActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(700, 650));
         setMinimumSize(new java.awt.Dimension(700, 650));
         getContentPane().setLayout(null);
 
-        txtFieldResult.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtFieldResult.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         txtFieldResult.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         txtFieldResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +89,7 @@ public class Interface extends javax.swing.JFrame {
 
         number1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number1.setText("1");
+        number1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number1ActionPerformed(evt);
@@ -81,6 +100,7 @@ public class Interface extends javax.swing.JFrame {
 
         number2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number2.setText("2");
+        number2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number2ActionPerformed(evt);
@@ -91,6 +111,7 @@ public class Interface extends javax.swing.JFrame {
 
         number3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number3.setText("3");
+        number3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number3ActionPerformed(evt);
@@ -101,6 +122,7 @@ public class Interface extends javax.swing.JFrame {
 
         number4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number4.setText("4");
+        number4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number4ActionPerformed(evt);
@@ -111,6 +133,7 @@ public class Interface extends javax.swing.JFrame {
 
         number5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number5.setText("5");
+        number5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number5ActionPerformed(evt);
@@ -121,6 +144,7 @@ public class Interface extends javax.swing.JFrame {
 
         number6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number6.setText("6");
+        number6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number6ActionPerformed(evt);
@@ -131,6 +155,7 @@ public class Interface extends javax.swing.JFrame {
 
         number7.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number7.setText("7");
+        number7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number7ActionPerformed(evt);
@@ -141,6 +166,7 @@ public class Interface extends javax.swing.JFrame {
 
         number8.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number8.setText("8");
+        number8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number8ActionPerformed(evt);
@@ -151,6 +177,7 @@ public class Interface extends javax.swing.JFrame {
 
         number9.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number9.setText("9");
+        number9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number9ActionPerformed(evt);
@@ -161,6 +188,7 @@ public class Interface extends javax.swing.JFrame {
 
         number0.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         number0.setText("0");
+        number0.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         number0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 number0ActionPerformed(evt);
@@ -171,6 +199,7 @@ public class Interface extends javax.swing.JFrame {
 
         point.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         point.setText(".");
+        point.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         point.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pointActionPerformed(evt);
@@ -181,58 +210,85 @@ public class Interface extends javax.swing.JFrame {
 
         equal.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         equal.setText("=");
+        equal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         equal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 equalActionPerformed(evt);
             }
         });
         getContentPane().add(equal);
-        equal.setBounds(461, 460, 191, 85);
+        equal.setBounds(460, 360, 191, 85);
 
         subtraction.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         subtraction.setText("-");
+        subtraction.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         subtraction.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 subtractionActionPerformed(evt);
             }
         });
         getContentPane().add(subtraction);
-        subtraction.setBounds(560, 210, 85, 85);
+        subtraction.setBounds(560, 150, 85, 85);
 
         addition.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         addition.setText("+");
+        addition.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         addition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 additionActionPerformed(evt);
             }
         });
         getContentPane().add(addition);
-        addition.setBounds(460, 210, 85, 85);
+        addition.setBounds(460, 150, 85, 85);
 
         multiplication.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         multiplication.setText("*");
+        multiplication.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         multiplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 multiplicationActionPerformed(evt);
             }
         });
         getContentPane().add(multiplication);
-        multiplication.setBounds(460, 310, 85, 85);
+        multiplication.setBounds(460, 250, 85, 85);
 
         division.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         division.setText("/");
+        division.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         division.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 divisionActionPerformed(evt);
             }
         });
         getContentPane().add(division);
-        division.setBounds(560, 310, 85, 85);
+        division.setBounds(560, 250, 85, 85);
 
-        firstPartCal.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        firstPartCal.setFont(new java.awt.Font("Tahoma", 0, 30)); // NOI18N
         firstPartCal.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         getContentPane().add(firstPartCal);
         firstPartCal.setBounds(50, 10, 600, 40);
+
+        clear.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        clear.setText("C");
+        clear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearActionPerformed(evt);
+            }
+        });
+        getContentPane().add(clear);
+        clear.setBounds(460, 460, 85, 85);
+
+        color.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        color.setText("?");
+        color.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        color.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorActionPerformed(evt);
+            }
+        });
+        getContentPane().add(color);
+        color.setBounds(560, 460, 85, 85);
 
         pack();
         setLocationRelativeTo(null);
@@ -244,6 +300,15 @@ public class Interface extends javax.swing.JFrame {
         Object result = engine.eval(calculation);                        
         return result.toString();
     }      
+    
+    private void setBackgrouondColorRand(){
+        Random gerador = new Random();         
+        getContentPane().setBackground(new Color(
+                gerador.nextInt(256),
+                gerador.nextInt(256),
+                gerador.nextInt(256))
+        );
+    }
     
     private void txtFieldResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFieldResultActionPerformed
 
@@ -336,15 +401,20 @@ public class Interface extends javax.swing.JFrame {
         txtFieldResult.setText(num = "");
     }//GEN-LAST:event_divisionActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+        txtFieldResult.setText(firstTerm = num = "");
+        firstPartCal.setText("");
+    }//GEN-LAST:event_clearActionPerformed
+
+    private void point2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_point2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_point2ActionPerformed
+
+    private void colorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorActionPerformed
+        setBackgrouondColorRand();
+    }//GEN-LAST:event_colorActionPerformed
+
+    public static void main(String args[]) {      
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -377,6 +447,8 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton btnNumber4;
     private javax.swing.JButton btnNumber5;
     private javax.swing.JButton btnNumber6;
+    private javax.swing.JButton clear;
+    private javax.swing.JButton color;
     private javax.swing.JButton division;
     private javax.swing.JButton equal;
     private javax.swing.JLabel firstPartCal;
@@ -392,6 +464,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton number8;
     private javax.swing.JButton number9;
     private javax.swing.JButton point;
+    private javax.swing.JButton point2;
     private javax.swing.JButton subtraction;
     private javax.swing.JTextField txtFieldResult;
     // End of variables declaration//GEN-END:variables
